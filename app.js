@@ -1,12 +1,14 @@
 var createError = require('http-errors');
 var express = require('express');
+require('dotenv').config()
+
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var mongoose= require('mongoose');
 var bodyParser=require('body-parser');
 var session=require('express-session');
-mongoose.connect("mongodb://127.0.0.1:27017/bda");
+mongoose.connect(process.env.MONGO_URI);
 
 require('dotenv/config');
 var indexRouter = require('./routes/index');
