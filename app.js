@@ -6,7 +6,14 @@ var logger = require('morgan');
 var mongoose= require('mongoose');
 var bodyParser=require('body-parser');
 var session=require('express-session');
-mongoose.connect("mongodb://127.0.0.1:27017/bda");
+mongoose.connect('mongodb+srv://root:root@nodeexpressprojects.57k0vry.mongodb.net/bda'
+// {
+//   userNewUrlParser:true,
+//   useUnifiedTopology:true
+// }).then(()=>{
+//   console.warn("db connection done");
+// }
+);
 
 require('dotenv/config');
 var indexRouter = require('./routes/index');

@@ -96,6 +96,7 @@ router.get('/profile/:id',async(req,res)=>{
     });
 });
 
+
 router.get('/logout',(req,res)=>{
   req.session.destroy();
   res.redirect('/');
