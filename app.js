@@ -1,4 +1,5 @@
 var createError = require('http-errors');
+require('dotenv').config()
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
@@ -6,7 +7,7 @@ var logger = require('morgan');
 var mongoose= require('mongoose');
 var bodyParser=require('body-parser');
 var session=require('express-session');
-mongoose.connect('mongodb+srv://root:root@nodeexpressprojects.57k0vry.mongodb.net/bda'
+mongoose.connect(process.env.MONGO_URI
 // {
 //   userNewUrlParser:true,
 //   useUnifiedTopology:true
